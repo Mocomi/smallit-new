@@ -1,0 +1,89 @@
+program_id: Torrent4.0_Development
+project_id: Torrent4.0
+participant_name: 開発チーム
+flow_dir: torrent4_development
+flow_base: "Flow/2025/01-15/torrent4_development"
+stock_base: "Stock/programs/Torrent4.0_Development/projects/Torrent4.0"
+period: 2025-01-15 → 2025-12-31
+purpose: 目標管理のPDCAサイクルをAIで効率化・高度化し、製造業の営業担当者および現場作業員の業務効率を向上させる
+background: 製造業企業のデータ活用の非効率性、PDCAサイクルの手動管理による業務効率の低下。企業に転がっているデータを有効活用できていない現状を解決する必要がある
+app_type: 自動目標管理SaaS（torrent統合基盤）
+main_user: 中小企業（製造業企業をパイロットユーザー）
+app_summary: 蓄積した業務データを目標管理に活用したいが、資金や人手、知見の不足により進められない中小企業向けの自動目標管理SaaS
+share_repo: "libyn-inc/aipm-hackathon-share"
+share_local_dir: "Share/aipm-hackathon-share"
+
+# 技術情報
+framework: Torrentフレームワーク（Smallit社自社開発）
+ai_integration: PDCAサイクルでのAI活用
+target_areas: 
+  - 営業管理
+  - 生産管理
+  - 会計管理
+  - データ移行支援
+
+# システム構成
+system_components:
+  - name: 統合基盤（torrent統合基盤）
+    description: 組織のメンバーが利用する目標管理の統合基盤
+    features:
+      - 他サービスからのデータ取り込みにより自動的にデータ収集・進捗管理
+      - 収集したデータを基に自動的に分析やサポートを実行
+      - 管理に手間をかけずにデータの最新化を実現
+      - ダッシュボード、目標設定、進捗状況管理、レポート、データ収集、システム管理
+  - name: 業務サービス群（torrentサービス）
+    description: Torrentフレームワークを用いた業務サービスグループ
+    services:
+      - 営業支援
+      - 生産管理
+      - 販売管理
+    features:
+      - マーケットプレイス形式で利用開始・停止が可能
+      - 標準業務をテンプレート化したサービスを用意し、ユーザーごとに自動構築
+      - Torrent-fwでスクラッチ開発したサービスを提供
+
+# Torrent4.0の特徴・強み
+key_features:
+  - name: 自動データ収集・進捗管理
+    features:
+      - 他サービスからのデータ取り込みにより自動的にデータ収集・進捗管理
+      - torrentサービスと併用することですぐにDX化を進められる
+      - 管理に手間をかけずにデータの最新化ができる
+  - name: 自動分析・サポート
+    features:
+      - 収集したデータを基に自動的に分析やサポートを実行
+      - 目標管理や経営判断に関するデータの可視化を自動化
+      - torrentサービスや他サービスからの自動データ収集および分析
+  - name: 目標達成アクションプラン提案
+    features:
+      - 目標達成へのアクションプランの自動提案機能
+      - データドリブン経営の実現
+      - エンゲージメント重視の経営支援
+
+# 解決する課題（これまで）
+problems_solved:
+  - name: 蓄積した業務データを目標管理に活用したいが、資金や人手、知見の不足により進められない
+    description: 中小企業のDXがすすまない、リソース不足、知見不足、開発するには高額、DXの推進が大事なのはわかっているが、どのように進めたらいいかわからない
+  - name: 従業員の手間をかけてのデータ収集や自力でのデータ分析
+    description: 勘や思い付きによる経営判断、手作業でのデータ収集・分析に時間がかかる、データの精度・信頼性が低い
+
+# 実現する価値（これから）
+value_propositions:
+  - name: torrentサービスと併用することですぐにDX化を進められる
+    description: 他システムのデータも自動収集・分析、目標管理や経営判断に関するデータの可視化を自動化
+  - name: torrentサービスや他サービスからの自動データ収集および分析
+    description: 目標達成へのアクションプランの自動提案機能、データドリブン経営の実現
+  - name: 「DX時代を生き抜く、全ての企業にITを。」を掲げるSmallitだからこそ
+    description: 次の10年、20年を生き抜くためのプロダクト提案ができる、自分自身が当事者として経験した知見と技術力があるからできる
+
+# エレベーターピッチ
+elevator_pitch: "torrent統合基盤は、蓄積した業務データを目標管理に活用したいが、資金や人手、知見の不足により進められない中小企業向けの自動目標管理SaaSである。これはtorrentサービスと併用することですぐにDX化を進められ、他システムのデータも自動収集・分析し、目標管理や経営判断に関するデータの可視化を自動化することができる。従業員の手間をかけてのデータ収集や自力でのデータ分析と違って、torrentサービスや他サービスからの自動データ収集および分析、目標達成へのアクションプランの自動提案機能が備わっている。そして「DX時代を生き抜く、全ての企業にITを。」を掲げるSmallitだからこそ、次の10年、20年を生き抜くためのプロダクト提案ができる。"
+
+# まとめ
+summary: "Torrent4.0は、中小企業のDX推進における資金・人手・知見不足の課題を解決し、自動目標管理SaaSとして「成果につながる形」でDXを推進します。"
+
+# 参考資料
+references:
+  - notion_meeting_logs: "DB04_議事録"
+  - latest_meeting: "Smallit_torrent_開発管理定例（2025-10-03）"
+  - client: "株式会社Smallit"

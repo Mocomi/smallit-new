@@ -1,0 +1,34 @@
+screen: SC1
+title: ダッシュボード
+tokens:
+  color_primary: "#3b82f6"
+  color_secondary: "#10b981"
+  color_bg: "#f8fafc"
+  color_card: "#ffffff"
+  spacing: 16
+  radius: 12
+  font_size_title: 24
+  font_size_subtitle: 18
+  font_size_body: 14
+layout:
+  header: {x: 0, y: 0, w: 1200, h: 64, text: "Torrent4.0 ダッシュボード"}
+  sidebar: {x: 0, y: 64, w: 240, h: 736, text: "メニュー・組織階層"}
+  main_area: {x: 240, y: 64, w: 960, h: 736, text: "目標・進捗表示"}
+  goal_cards: {x: 256, y: 80, w: 928, h: 200, text: "目標カード表示エリア"}
+  progress_chart: {x: 256, y: 296, w: 464, h: 200, text: "進捗推移グラフ"}
+  member_status: {x: 736, y: 296, w: 448, h: 200, text: "メンバー状況"}
+  notification: {x: 1120, y: 16, w: 32, h: 32, text: "通知アイコン"}
+links_stories: [US-001, US-002, US-007, US-008, US-012, US-019, US-020, US-021]
+accessibility:
+  focus_order: [header, sidebar, goal_cards, progress_chart, member_status]
+  aria:
+    - element: goal_cards
+      role: region
+      aria-label: "目標と進捗の表示エリア"
+    - element: progress_chart
+      role: img
+      aria-label: "進捗推移グラフ"
+    - element: member_status
+      role: region
+      aria-label: "メンバー状況表示エリア"
+

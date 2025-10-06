@@ -1,0 +1,175 @@
+<mxfile host="app.diagrams.net" modified="2025-01-15T00:00:00.000Z" agent="5.0" etag="xxx" version="24.7.17" type="device">
+  <diagram name="SC2_目標設定・進捗管理" id="SC2_goals_progress">
+    <mxGraphModel dx="1422" dy="794" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="800" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        
+        <!-- ヘッダー -->
+        <mxCell id="header" value="目標設定・進捗管理" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#3b82f6;fontColor=#ffffff;fontSize=18;fontStyle=1;strokeColor=#1e40af;" vertex="1" parent="1">
+          <mxGeometry x="0" y="0" width="1200" height="64" as="geometry" />
+        </mxCell>
+        
+        <!-- サイドバー -->
+        <mxCell id="sidebar" value="メニュー・組織階層" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8fafc;strokeColor=#e2e8f0;fontSize=14;fontStyle=1;align=left;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="0" y="64" width="240" height="736" as="geometry" />
+        </mxCell>
+        
+        <!-- メニュー項目 -->
+        <mxCell id="menu_dashboard" value="📊 ダッシュボード" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;fontColor=#374151;fontSize=14;strokeColor=#d1d5db;" vertex="1" parent="1">
+          <mxGeometry x="16" y="96" width="208" height="40" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="menu_goals" value="🎯 目標設定" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#3b82f6;fontColor=#ffffff;fontSize=14;fontStyle=1;strokeColor=#1e40af;" vertex="1" parent="1">
+          <mxGeometry x="16" y="152" width="208" height="40" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="menu_progress" value="📈 進捗管理" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;fontColor=#374151;fontSize=14;strokeColor=#d1d5db;" vertex="1" parent="1">
+          <mxGeometry x="16" y="208" width="208" height="40" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="menu_system" value="⚙️ システム管理" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;fontColor=#374151;fontSize=14;strokeColor=#d1d5db;" vertex="1" parent="1">
+          <mxGeometry x="16" y="264" width="208" height="40" as="geometry" />
+        </mxCell>
+        
+        <!-- 組織階層 -->
+        <mxCell id="org_title" value="組織階層:" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="16" y="320" width="80" height="20" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="org_company" value="🏢 三河自動車部品" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="16" y="344" width="120" height="20" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="org_sales" value="  📋 営業部" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="16" y="368" width="80" height="20" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="org_sales1" value="    👥 営業1課" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="16" y="392" width="80" height="20" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="org_sales2" value="    👥 営業2課" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="16" y="416" width="80" height="20" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="org_manufacturing" value="  🏭 製造部" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="16" y="440" width="80" height="20" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="org_admin" value="  📊 管理部" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="16" y="464" width="80" height="20" as="geometry" />
+        </mxCell>
+        
+        <!-- メインエリア -->
+        <mxCell id="main_area" value="目標設定・進捗管理エリア" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#e2e8f0;fontSize=14;fontStyle=1;align=left;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="240" y="64" width="960" height="736" as="geometry" />
+        </mxCell>
+        
+        <!-- 目標設定フォーム -->
+        <mxCell id="goal_setting" value="目標設定フォーム" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f0f9ff;strokeColor=#0ea5e9;fontSize=12;fontStyle=1;align=left;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="256" y="80" width="464" height="300" as="geometry" />
+        </mxCell>
+        
+        <!-- 目標設定フォーム要素 -->
+        <mxCell id="goal_type_label" value="タイプ:" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="272" y="96" width="40" height="20" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="goal_type_select" value="[会社目標▼]" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#d1d5db;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="320" y="96" width="120" height="24" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="goal_title_label" value="タイトル:" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="272" y="128" width="40" height="20" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="goal_title_input" value="[________________]" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#d1d5db;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="320" y="128" width="200" height="24" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="goal_desc_label" value="説明:" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="272" y="160" width="40" height="20" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="goal_desc_input" value="[________________]" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#d1d5db;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="320" y="160" width="200" height="24" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="goal_period_label" value="期間:" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="272" y="192" width="40" height="20" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="goal_period_input" value="[____]～[____]" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#d1d5db;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="320" y="192" width="200" height="24" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="goal_value_label" value="目標値:" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="272" y="224" width="40" height="20" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="goal_value_input" value="[________]" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#d1d5db;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="320" y="224" width="200" height="24" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="ai_suggest_btn" value="🤖 AI提案" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#10b981;fontColor=#ffffff;fontSize=12;fontStyle=1;strokeColor=#059669;" vertex="1" parent="1">
+          <mxGeometry x="272" y="256" width="80" height="24" as="geometry" />
+        </mxCell>
+        
+        <!-- 進捗入力フォーム -->
+        <mxCell id="progress_input" value="進捗入力フォーム" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f0fdf4;strokeColor=#10b981;fontSize=12;fontStyle=1;align=left;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="736" y="80" width="448" height="300" as="geometry" />
+        </mxCell>
+        
+        <!-- 進捗入力フォーム要素 -->
+        <mxCell id="progress_goal_label" value="目標:" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="752" y="96" width="40" height="20" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="progress_goal_input" value="[売上10億円]" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#d1d5db;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="800" y="96" width="200" height="24" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="progress_current_label" value="現在値:" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="752" y="128" width="40" height="20" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="progress_current_input" value="[8.5億円]" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#d1d5db;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="800" y="128" width="200" height="24" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="progress_comment_label" value="コメント:" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="752" y="160" width="60" height="20" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="progress_comment_input" value="[________________]" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#d1d5db;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="800" y="160" width="200" height="24" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="progress_update_btn" value="📈 更新" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#10b981;fontColor=#ffffff;fontSize=12;fontStyle=1;strokeColor=#059669;" vertex="1" parent="1">
+          <mxGeometry x="752" y="192" width="80" height="24" as="geometry" />
+        </mxCell>
+        
+        <!-- 進捗推移グラフ -->
+        <mxCell id="progress_chart" value="進捗推移グラフ&#xa;[グラフ表示エリア]" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f0f9ff;strokeColor=#0ea5e9;fontSize=12;fontStyle=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="256" y="396" width="464" height="200" as="geometry" />
+        </mxCell>
+        
+        <!-- AI提案表示 -->
+        <mxCell id="ai_suggestions" value="AI提案表示&#xa;[提案内容表示エリア]" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fef3c7;strokeColor=#f59e0b;fontSize=12;fontStyle=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="736" y="396" width="448" height="200" as="geometry" />
+        </mxCell>
+        
+        <!-- 操作ボタン -->
+        <mxCell id="save_btn" value="💾 保存" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#3b82f6;fontColor=#ffffff;fontSize=12;fontStyle=1;strokeColor=#1e40af;" vertex="1" parent="1">
+          <mxGeometry x="256" y="612" width="120" height="40" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="cancel_btn" value="❌ キャンセル" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ef4444;fontColor=#ffffff;fontSize=12;fontStyle=1;strokeColor=#dc2626;" vertex="1" parent="1">
+          <mxGeometry x="392" y="612" width="120" height="40" as="geometry" />
+        </mxCell>
+        
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

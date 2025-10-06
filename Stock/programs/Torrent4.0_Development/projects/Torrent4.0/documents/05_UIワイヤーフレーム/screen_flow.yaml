@@ -1,0 +1,22 @@
+flows:
+  MVP:
+    - from: SC1
+      action: 目標設定
+      to: SC2
+    - from: SC2
+      action: 進捗更新
+      to: SC1
+    - from: SC1
+      action: システム管理
+      to: SC3
+    - from: SC3
+      action: 戻る
+      to: SC1
+  Release1:
+    - from: SC1
+      action: 詳細表示
+      to: SC2
+    - from: SC2
+      action: 設定変更
+      to: SC3
+

@@ -1,0 +1,67 @@
+screens:
+  - id: SC1
+    title: ダッシュボード
+    links_stories: [US-001, US-002, US-007, US-008, US-012, US-019, US-020, US-021]
+  - id: SC2
+    title: 目標設定・進捗管理
+    links_stories: [US-003, US-004, US-005, US-006, US-009, US-010, US-013, US-014, US-022, US-023, US-024, US-025, US-026, US-027]
+  - id: SC3
+    title: システム管理
+    links_stories: [US-015, US-016, US-017, US-018, US-030, US-031, US-032]
+mapping:
+  US-001: SC1
+  US-002: SC1
+  US-003: SC2
+  US-004: SC2
+  US-005: SC2
+  US-006: SC2
+  US-007: SC1
+  US-008: SC1
+  US-009: SC2
+  US-010: SC2
+  US-011: SC2
+  US-012: SC1
+  US-013: SC2
+  US-014: SC2
+  US-015: SC3
+  US-016: SC3
+  US-017: SC3
+  US-018: SC3
+  US-019: SC1
+  US-020: SC1
+  US-021: SC1
+  US-022: SC2
+  US-023: SC2
+  US-024: SC2
+  US-025: SC2
+  US-026: SC2
+  US-027: SC2
+  US-028: SC1
+  US-029: SC1
+  US-030: SC3
+  US-031: SC3
+  US-032: SC3
+flows:
+  MVP:
+    - from: SC1
+      action: 目標設定
+      to: SC2
+    - from: SC2
+      action: 進捗更新
+      to: SC1
+    - from: SC1
+      action: システム管理
+      to: SC3
+    - from: SC3
+      action: 戻る
+      to: SC1
+  Release1:
+    - from: SC1
+      action: 詳細表示
+      to: SC2
+    - from: SC2
+      action: 設定変更
+      to: SC3
+numbering_policy:
+  - prefix: SC=Screen
+

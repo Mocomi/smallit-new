@@ -1,0 +1,36 @@
+screen: SC2
+title: 目標設定・進捗管理
+tokens:
+  color_primary: "#3b82f6"
+  color_secondary: "#10b981"
+  color_bg: "#f8fafc"
+  color_card: "#ffffff"
+  spacing: 16
+  radius: 12
+  font_size_title: 24
+  font_size_subtitle: 18
+  font_size_body: 14
+layout:
+  header: {x: 0, y: 0, w: 1200, h: 64, text: "目標設定・進捗管理"}
+  sidebar: {x: 0, y: 64, w: 240, h: 736, text: "メニュー・組織階層"}
+  main_area: {x: 240, y: 64, w: 960, h: 736, text: "目標設定・進捗管理エリア"}
+  goal_setting: {x: 256, y: 80, w: 464, h: 300, text: "目標設定フォーム"}
+  progress_input: {x: 736, y: 80, w: 448, h: 300, text: "進捗入力フォーム"}
+  progress_chart: {x: 256, y: 396, w: 464, h: 200, text: "進捗推移グラフ"}
+  ai_suggestions: {x: 736, y: 396, w: 448, h: 200, text: "AI提案表示"}
+  save_btn: {x: 256, y: 612, w: 120, h: 40, text: "保存"}
+  cancel_btn: {x: 392, y: 612, w: 120, h: 40, text: "キャンセル"}
+links_stories: [US-003, US-004, US-005, US-006, US-009, US-010, US-013, US-014, US-022, US-023, US-024, US-025, US-026, US-027]
+accessibility:
+  focus_order: [goal_setting, progress_input, progress_chart, ai_suggestions, save_btn, cancel_btn]
+  aria:
+    - element: goal_setting
+      role: form
+      aria-label: "目標設定フォーム"
+    - element: progress_input
+      role: form
+      aria-label: "進捗入力フォーム"
+    - element: ai_suggestions
+      role: region
+      aria-label: "AI提案表示エリア"
+

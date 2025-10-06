@@ -1,0 +1,36 @@
+screen: SC3
+title: システム管理
+tokens:
+  color_primary: "#3b82f6"
+  color_secondary: "#10b981"
+  color_bg: "#f8fafc"
+  color_card: "#ffffff"
+  spacing: 16
+  radius: 12
+  font_size_title: 24
+  font_size_subtitle: 18
+  font_size_body: 14
+layout:
+  header: {x: 0, y: 0, w: 1200, h: 64, text: "システム管理"}
+  sidebar: {x: 0, y: 64, w: 240, h: 736, text: "メニュー・組織階層"}
+  main_area: {x: 240, y: 64, w: 960, h: 736, text: "システム管理エリア"}
+  user_management: {x: 256, y: 80, w: 464, h: 200, text: "ユーザー管理"}
+  organization_management: {x: 736, y: 80, w: 448, h: 200, text: "組織体制管理"}
+  role_management: {x: 256, y: 296, w: 464, h: 200, text: "ロール・権限管理"}
+  data_source_management: {x: 736, y: 296, w: 448, h: 200, text: "データソース管理"}
+  system_settings: {x: 256, y: 512, w: 464, h: 200, text: "システム設定"}
+  back_btn: {x: 256, y: 728, w: 120, h: 40, text: "戻る"}
+links_stories: [US-015, US-016, US-017, US-018, US-030, US-031, US-032]
+accessibility:
+  focus_order: [user_management, organization_management, role_management, data_source_management, system_settings, back_btn]
+  aria:
+    - element: user_management
+      role: region
+      aria-label: "ユーザー管理エリア"
+    - element: organization_management
+      role: region
+      aria-label: "組織体制管理エリア"
+    - element: role_management
+      role: region
+      aria-label: "ロール・権限管理エリア"
+
