@@ -38,6 +38,53 @@ Torrent4.0は大きく以下の2要素で構成される：
    - 営業支援、生産管理、販売管理など
    - マーケットプレイス形式で利用開始・停止が可能
 
+### システムアーキテクチャ（2025年1月15日更新）
+
+#### 5レイヤアーキテクチャ
+Torrent4.0は以下の5つのレイヤで構成されるマルチテナント・マイクロサービスアーキテクチャを採用：
+
+1. **[Presentation] プレゼンテーション層**
+   - **マイクロフロントエンド**: 見積/受注/出荷/在庫/計画/実績などの業務別UI
+   - **共通デザインシステム**: i18n（国際化）、A11y（アクセシビリティ）対応
+   - **BFF per Domain**: GraphQL/REST API、認可・集約・キャッシュ機能
+
+2. **[Domain Templates] ドメインテンプレート層**
+   - **ms-quote-core**: 見積コアサービス + バーティカルパック（金属加工、食品加工など）
+   - **ms-order/ms-ship/ms-inventory**: 受注、出荷、在庫管理サービス
+   - **ms-plan/ms-prod/ms-forecast**: 計画、生産、予測サービス
+   - **database-per-service + Outbox**: サービスごとの独立DB、イベント発行の整合性確保
+
+3. **[Platform] プラットフォーム層**
+   - **Identity & Access**: SSO、RBAC/ABAC、テナント分離
+   - **Tenant Manager & Billing**: テナント管理、課金機能
+   - **Template/Plugin Registry**: テンプレート・プラグイン管理、互換性確保
+   - **AppConfig**: 実行時動的設定管理、Feature Flag、MFE解決
+   - **Event Bus**: Pub/Subモデル、スキーマバージョン管理
+   - **Workflow Orchestrator**: BPMN/DMN、Step Functions、Temporal
+   - **Canonical Data Model**: API・イベント規約定義
+   - **Data Services**: 監査ログ、全文検索、DWH連携
+   - **Observability**: ログ・メトリクス・トレース
+
+4. **[Integration] インテグレーション層**
+   - **外部SaaS/社内システム**: 会計、EDI、WMS、SFAなど
+   - **Inbound API/Webhook/CDC**: 外部データ連携技術
+
+5. **[Edge] エッジ層**
+   - **Edge Agent**: 双方向同期、オフライン動作、ローカルUI、周辺機器連携
+   - **デバイス連携**: OPC-UA、Modbus、ラベルプリンター、スキャナ、秤など
+
+#### 業界別テンプレート（Vertical Pack）設計
+- **6つのPack構成**: UI、Rule、Workflow、Data、Integration、Analytics
+- **設定駆動開発**: JSON Schema/UI Schemaによる動的UI生成
+- **動的切り替え**: テナント/業界単位での機能有効化
+- **互換性管理**: Base機能は互換性維持、破壊的変更はバージョン分離
+
+#### イベント駆動アーキテクチャ
+- **Bounded Context**: ドメイン駆動設計による適切な境界設定
+- **EDA**: サービス間の疎結合と非同期処理
+- **Provider/SPI**: 共通機能の抽象化と実装切り替え
+- **Outboxパターン**: データベーストランザクションとイベント発行の整合性確保
+
 #### PoC検証対象の技術要素
 - **業務テンプレート**: テンプレート間の疎結合連携（Event-Driven Architecture）
 - **AIテンプレート生成**: メタモデル＋Few-shot/RAGによる自動生成
@@ -50,6 +97,26 @@ Torrent4.0は大きく以下の2要素で構成される：
 - フレームワーク: Smallit社自社開発のTorrentフレームワーク
 - AI統合: PDCAサイクルでのAI活用（Plan/Do/Check/Action）
 - 対象領域: 営業管理、生産管理、会計管理、データ移行支援
+
+#### 技術スタック（2025年1月15日更新）
+
+##### フロントエンド
+- **マイクロフロントエンド**: Module Federation等
+- **共通デザインシステム**: Storybook等
+- **UI Schema**: JSONFormsライブラリ
+- **BFF**: GraphQL/REST API
+
+##### バックエンド
+- **マイクロサービス**: Spring Boot、Node.js等
+- **イベント駆動**: Apache Kafka、Debezium
+- **ワークフロー**: Flowable、Camunda、Temporal、Step Functions
+- **データベース**: PostgreSQL（JSONB対応）、Amazon Redshift
+
+##### インフラ・運用
+- **コンテナ化**: Docker、Kubernetes
+- **監視・観測**: Prometheus、Grafana等
+- **CI/CD**: 継続的インテグレーション・デプロイ
+- **セキュリティ**: SSO、RBAC/ABAC、暗号化通信
 
 #### 技術的アプローチ
 - **AI自然言語処理**: データ項目の自動識別と分類機能
@@ -165,6 +232,20 @@ torrent統合基盤は、蓄積した業務データを目標管理に活用し�
 ### まとめ
 Torrent4.0は、中小企業のDX推進における資金・人手・知見不足の課題を解決し、自動目標管理SaaSとして「成果につながる形」でDXを推進します。
 
+#### アーキテクチャの革新性（2025年1月15日更新）
+- **5レイヤアーキテクチャ**: プレゼンテーション、ドメインテンプレート、プラットフォーム、インテグレーション、エッジの明確な分離
+- **業界別テンプレート**: 6つのVertical Packによる柔軟なカスタマイズ
+- **イベント駆動設計**: サービス間の疎結合と高いスケーラビリティ
+- **設定駆動開発**: JSON Schema/UI Schemaによる動的UI生成
+- **マルチテナント対応**: テナント分離と共通サービスの効率的な運用
+
+#### 技術的優位性
+- **マイクロサービス**: 独立した開発・デプロイ・スケーリング
+- **Outboxパターン**: データ整合性とイベント配信の信頼性確保
+- **ワークフローエンジン**: 複雑な業務プロセスの自動化
+- **エッジ対応**: オフライン動作とローカルデバイス連携
+- **AI統合**: PDCAサイクルでのAI活用と自動分析
+
 ### 最新の開発状況（2025年10月8日時点）
 
 #### 現在の開発チームの現状
@@ -200,8 +281,27 @@ Torrent4.0は、中小企業のDX推進における資金・人手・知見不�
 - **検証KPI**: マッピング適合率≧85%、KPI検算誤差≦2%、正しいグラフ生成率≧80%
 
 ### 参考資料
+
+#### 基本資料
 - Notion議事録: Smallit社とのMTG議事録（DB04_議事録）
 - 最新議事録: Smallit_torrent_開発管理定例（2025-10-08）
 - ヒアリング記録: `/documents/02_課題定義/ヒアリング記録_2025-10-08.md`
 - プロジェクト全体像: `/documents/02_課題定義/プロジェクト全体像_2025-10-08.md`
 - PoC計画: `/documents/02_課題定義/PoC計画_2025-10-08.md`
+
+#### アーキテクチャ設計資料（2025年1月15日追加）
+- **システムアーキテクチャ概念図**: `/documents/assets/システムアーキテクチャ概念図_2025-01-15.md`
+- **レイヤ＆コンポーネント全体像**: `/documents/assets/レイヤコンポーネント全体像_2025-01-15.md`
+- **CSV詳細分析**: `/documents/assets/CSV詳細分析_2025-01-15.md`
+- **アーキテクチャ分析**: `/documents/assets/アーキテクチャ分析_2025-01-15.md`
+- **Excel設計資料**: `/documents/assets/Smallit_業務テンプレートアーキテクチャ.xlsx`
+- **CSV設計資料**: 
+  - `/documents/assets/全体像（レイヤ＆コンポーネント）.csv`
+  - `/documents/assets/テンプレート&Vertical設計（中核）.csv`
+
+#### 設計思想・技術要素
+- **マルチテナント設計**: テナント分離と共通サービスの両立
+- **イベント駆動アーキテクチャ**: Kafka + Debezium + Outboxパターン
+- **マイクロサービス設計**: Bounded Context + サービスごとのDB分離
+- **業界別テンプレート**: 6つのVertical Pack構成
+- **設定駆動開発**: JSON Schema/UI Schemaによる動的UI生成
